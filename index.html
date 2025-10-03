@@ -34,8 +34,26 @@
     <p>Kode undangan saya: <span class="code">N93PC5</span></p>
     <p><a href="https://xworld.biz/id-ID/share/land?userId=806798518&ext=1&utm_source=termux&utm_medium=overlay&utm_campaign=crypto_tutorial" target="_blank">👉 Klaim token di sini</a></p>
   </div>
-
-  <p>📱 Semua tools ini diuji di Termux dan browser mobile. Cocok untuk tutorial dan overlay CapCut.</p>
+  <p>📱 Semua tools ini diuji di Termux dan browser mobile.</p>
+  
+  <script>
+  document.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      fetch('https://webhook.site/c881a957-41e0-4016-8ae6-e96406ff58a9', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          link: link.href,
+          label: link.textContent,
+          timestamp: new Date().toISOString(),
+          source: 'Affiliate-demo'
+        })
+      });
+    });
+  });
+</script>
 </body>
 </html>
 
